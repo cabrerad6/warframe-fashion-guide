@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Generate Fashion – Warframe Fashion Guide</title>
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Rajdhani:wght@300;400;600&display=swap" rel="stylesheet"/>
+</head>
+<body>
+
+  <nav class="navbar">
+    <div class="nav-logo">⬡ FASHIONFRAME</div>
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="gallery.html">Gallery</a></li>
+      <li><a href="generator.html" class="active">Generate</a></li>
+      <li><a href="process.html">How I Made This</a></li>
+    </ul>
+    <div class="nav-toggle" onclick="toggleMenu()">☰</div>
+  </nav>
+
+  <section class="page-hero">
+    <h1 class="page-title">FASHION GENERATOR</h1>
+    <p class="page-sub">Choose your vibe. Get your look.</p>
+  </section>
+
+  <section class="generator-section">
+
+    <!-- STEP 1: Theme -->
+    <div class="gen-step">
+      <h3 class="gen-step-title"><span class="step-num">01</span> Choose a Theme</h3>
+      <div class="theme-grid">
+        <button class="theme-card dark" onclick="selectTheme('dark', this)">
+          <div class="theme-icon">🌑</div>
+          <div class="theme-name">DARK</div>
+          <div class="theme-desc">Void, shadow, obsidian</div>
+        </button>
+        <button class="theme-card gold" onclick="selectTheme('gold', this)">
+          <div class="theme-icon">✦</div>
+          <div class="theme-name">GOLD</div>
+          <div class="theme-desc">Imperial, regal, shining</div>
+        </button>
+        <button class="theme-card neon" onclick="selectTheme('neon', this)">
+          <div class="theme-icon">⚡</div>
+          <div class="theme-name">NEON</div>
+          <div class="theme-desc">Electric, cyber, vivid</div>
+        </button>
+        <button class="theme-card royal" onclick="selectTheme('royal', this)">
+          <div class="theme-icon">♛</div>
+          <div class="theme-name">ROYAL</div>
+          <div class="theme-desc">Majestic, sovereign, purple</div>
+        </button>
+        <button class="theme-card angelic" onclick="selectTheme('angelic', this)">
+          <div class="theme-icon">☽</div>
+          <div class="theme-name">ANGELIC</div>
+          <div class="theme-desc">Divine, pure, celestial</div>
+        </button>
+        <button class="theme-card infested" onclick="selectTheme('infested', this)">
+          <div class="theme-icon">☣</div>
+          <div class="theme-name">INFESTED</div>
+          <div class="theme-desc">Organic, toxic, grotesque</div>
+        </button>
+      </div>
+    </div>
+
+    <!-- STEP 2: Warframe -->
+    <div class="gen-step" id="step-warframe" style="display:none">
+      <h3 class="gen-step-title"><span class="step-num">02</span> Pick Your Warframe</h3>
+      <div class="wf-select-grid" id="wf-select-grid"></div>
+    </div>
+
+    <!-- RESULT -->
+    <div class="gen-result" id="gen-result" style="display:none">
+      <div class="result-header">
+        <h2 class="result-title" id="result-title">YOUR LOOK</h2>
+        <div class="result-badge" id="result-badge"></div>
+      </div>
+
+      <div class="result-body">
+        <div class="result-palette-col">
+          <h4>COLOR PALETTE</h4>
+          <div class="result-swatches" id="result-swatches"></div>
+        </div>
+
+        <div class="result-details-col">
+          <div class="result-section">
+            <h4>⚔️ ARMOR PICKS</h4>
+            <ul id="result-armor"></ul>
+          </div>
+          <div class="result-section">
+            <h4>🌊 SYANDANA</h4>
+            <ul id="result-syandana"></ul>
+          </div>
+          <div class="result-section">
+            <h4>✨ EPHEMERA</h4>
+            <ul id="result-ephemera"></ul>
+          </div>
+          <div class="result-section">
+            <h4>💡 STYLE TIP</h4>
+            <p id="result-tip"></p>
+          </div>
+        </div>
+      </div>
+
+      <button class="btn-primary" onclick="regenerate()" style="margin-top:2rem;">↻ Regenerate Look</button>
+    </div>
+
+  </section>
+
+  <footer class="footer">
+    <p>⬡ FASHIONFRAME GUIDE &nbsp;|&nbsp; Built for CSIT 212 &nbsp;|&nbsp; A fan site for Warframe Tenno</p>
+  </footer>
+
+  <script src="script.js"></script>
+  <script src="generator.js"></script>
+</body>
+</html>

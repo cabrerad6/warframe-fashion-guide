@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>How I Made This – Warframe Fashion Guide</title>
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Rajdhani:wght@300;400;600&display=swap" rel="stylesheet"/>
+</head>
+<body>
+
+  <nav class="navbar">
+    <div class="nav-logo">⬡ FASHIONFRAME</div>
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="gallery.html">Gallery</a></li>
+      <li><a href="generator.html">Generate</a></li>
+      <li><a href="process.html" class="active">How I Made This</a></li>
+    </ul>
+    <div class="nav-toggle" onclick="toggleMenu()">☰</div>
+  </nav>
+
+  <section class="page-hero">
+    <h1 class="page-title">HOW I MADE THIS</h1>
+    <p class="page-sub">Project Process — CSIT 212 Final Project</p>
+  </section>
+
+  <section class="process-section">
+
+    <div class="process-intro">
+      <h2>Project Overview</h2>
+      <p>This website — <strong>Warframe Fashion Guide (Fashionframe)</strong> — was built entirely through AI prompting using <strong>Claude (Anthropic)</strong> as the autocoding tool. No code was manually written or edited by the student. All HTML, CSS, and JavaScript was generated through a series of structured prompts, which are documented below.</p>
+      <p>The project demonstrates how modern AI tools can be used to design, build, and deploy a complete multi-page website from scratch using only natural language instructions.</p>
+      <div class="process-meta">
+        <div class="meta-item"><span class="meta-label">AI Tool Used</span><span class="meta-val">Claude by Anthropic (claude.ai)</span></div>
+        <div class="meta-item"><span class="meta-label">Deployed Via</span><span class="meta-val">GitHub Pages</span></div>
+        <div class="meta-item"><span class="meta-label">Files Created</span><span class="meta-val">index.html, gallery.html, generator.html, process.html, style.css, script.js, generator.js</span></div>
+        <div class="meta-item"><span class="meta-label">Manual Code Written</span><span class="meta-val">None — 100% AI-generated</span></div>
+      </div>
+    </div>
+
+    <h2 class="process-prompts-title">THE PROMPTS</h2>
+    <p class="process-prompts-sub">Each prompt below was entered into Claude. The explanation describes what Claude produced as a result.</p>
+
+    <!-- PROMPT 1 -->
+    <div class="prompt-card">
+      <div class="prompt-number">PROMPT 01</div>
+      <div class="prompt-text">
+        "Act as an AI autocoding web developer. I need to complete my CSIT 212 Final Project by building a public website completely through prompting, with no manual coding or deployment by me. My project idea is a website called 'Warframe Fashion Guide' that helps users find good Warframe fashion ideas. The website should give stylish Warframe looks with color palettes, armor/accessory suggestions, themes, and a gallery of builds. Help me build the full website with all files and give me step-by-step GitHub Pages deployment instructions."
+      </div>
+      <div class="prompt-result">
+        <h4>What This Produced:</h4>
+        <p>This was the master prompt that kicked off the entire project. Claude responded by generating the complete structure for a 4-page website: <code>index.html</code> (homepage), <code>gallery.html</code> (fashion gallery), <code>generator.html</code> (theme generator), and <code>process.html</code> (this page). It also produced <code>style.css</code> with a dark gaming aesthetic, <code>script.js</code> for navigation and interactivity, and <code>generator.js</code> with full fashion data for 6 themes. Additionally, Claude provided step-by-step GitHub Pages deployment instructions and future improvement prompts.</p>
+      </div>
+    </div>
+
+    <!-- PROMPT 2 -->
+    <div class="prompt-card">
+      <div class="prompt-number">PROMPT 02</div>
+      <div class="prompt-text">
+        "Create a modern gaming-style website design for a Warframe fashion guide. Use a dark background with glowing accents, the Orbitron and Rajdhani fonts from Google Fonts, a CSS variable system for colors, and a sticky navigation bar. Make it feel like a premium game fan site."
+      </div>
+      <div class="prompt-result">
+        <h4>What This Produced:</h4>
+        <p>Claude generated the entire <code>style.css</code> file. This included a CSS variable system using <code>:root</code> with color tokens, a sticky navbar with a glowing logo, hero sections with animated grid backgrounds, card components with hover glow effects, and responsive layouts using CSS Grid and Flexbox. The Orbitron font is used for headings and the Rajdhani font for body text — giving the site a sci-fi gaming aesthetic.</p>
+      </div>
+    </div>
+
+    <!-- PROMPT 3 -->
+    <div class="prompt-card">
+      <div class="prompt-number">PROMPT 03</div>
+      <div class="prompt-text">
+        "Build a Warframe fashion gallery page with 9 build cards. Each card should show a Warframe name, theme badge (dark, gold, neon, royal, angelic, infested), color swatches, and open a modal popup with full details including color palette with hex codes, armor recommendations, syandana suggestions, ephemera options, and style notes."
+      </div>
+      <div class="prompt-result">
+        <h4>What This Produced:</h4>
+        <p>Claude built the complete <code>gallery.html</code> page with 9 Warframe build cards including Excalibur Umbra, Rhino Prime, Volt Prime, Mag Prime, Wisp, Saryn Prime, Ash Prime, Nova Prime, and Mesa Prime. Each card has CSS-generated art, color swatches, and a clickable modal with full styling breakdowns. A filter bar lets users filter by theme. The JavaScript for filtering and modal open/close was included in <code>script.js</code>.</p>
+      </div>
+    </div>
+
+    <!-- PROMPT 4 -->
+    <div class="prompt-card">
+      <div class="prompt-number">PROMPT 04</div>
+      <div class="prompt-text">
+        "Create an interactive Fashion Generator page where a user can: (1) click one of 6 theme buttons (dark, gold, neon, royal, angelic, infested), (2) then select from a list of recommended Warframes for that theme, and (3) receive a complete fashion blueprint with a color palette, armor picks, syandana, ephemera, and a style tip. Build this in JavaScript with all data hardcoded."
+      </div>
+      <div class="prompt-result">
+        <h4>What This Produced:</h4>
+        <p>Claude generated <code>generator.html</code> (the generator UI with a 3-step flow) and <code>generator.js</code> containing all the fashion data for every theme and Warframe combination. Clicking a theme reveals step 2 (Warframe selection), and choosing a Warframe generates a full result card with a color palette, themed lists, and a style tip. The system can also randomly regenerate a look using the "Regenerate Look" button.</p>
+      </div>
+    </div>
+
+    <!-- PROMPT 5 -->
+    <div class="prompt-card">
+      <div class="prompt-number">PROMPT 05</div>
+      <div class="prompt-text">
+        "Add a homepage (index.html) that explains what the Warframe Fashion Guide does. Include a hero section with a title, subtitle, and two call-to-action buttons. Add a features section with 4 cards explaining what the site offers. Add a theme preview strip showing the 6 themes as clickable pills that link to the generator."
+      </div>
+      <div class="prompt-result">
+        <h4>What This Produced:</h4>
+        <p>Claude created the complete <code>index.html</code> homepage. The hero section has animated background grid lines, a large Orbitron title, a subtitle, and two CTA buttons. The features section uses a 4-column card grid with emoji icons. The theme preview strip shows all 6 themes as styled pill buttons that link directly to the generator page with a pre-selected theme parameter.</p>
+      </div>
+    </div>
+
+    <!-- PROMPT 6 -->
+    <div class="prompt-card">
+      <div class="prompt-number">PROMPT 06</div>
+      <div class="prompt-text">
+        "Give me exact step-by-step instructions to deploy this website publicly on GitHub Pages with no experience required. Tell me exactly where to click, what to name the repository, and what the final public URL will look like."
+      </div>
+      <div class="prompt-result">
+        <h4>What This Produced:</h4>
+        <p>Claude provided a complete, beginner-friendly GitHub Pages deployment guide (reproduced in the Deployment section below). Instructions covered: creating a GitHub account, making a new repository, uploading files via the web interface, enabling GitHub Pages in repository settings, and the format of the final public URL. No terminal or command line was required.</p>
+      </div>
+    </div>
+
+    <!-- PROMPT 7 -->
+    <div class="prompt-card">
+      <div class="prompt-number">PROMPT 07</div>
+      <div class="prompt-text">
+        "Make the website fully responsive for mobile. The navbar should collapse into a hamburger menu on small screens. The gallery grid should go to 1 column on phones. The generator theme cards should stack on mobile."
+      </div>
+      <div class="prompt-result">
+        <h4>What This Produced:</h4>
+        <p>Claude added CSS media queries to <code>style.css</code> for breakpoints at 768px and 480px. The navbar gained a hamburger icon (☰) that toggles a dropdown menu. Gallery and generator grids collapse to 1-2 columns on mobile. Font sizes scale down proportionally. The hero section padding adjusts for small screens so the title and buttons stay readable on phones.</p>
+      </div>
+    </div>
+
+    <!-- DEPLOYMENT -->
+    <div class="deployment-guide">
+      <h2>🚀 GitHub Pages Deployment Guide</h2>
+      <p>These are the exact steps used to publish this website publicly using GitHub Pages — no coding or terminal required.</p>
+
+      <div class="deploy-steps">
+        <div class="deploy-step">
+          <div class="deploy-num">1</div>
+          <div class="deploy-body">
+            <strong>Create a GitHub Account</strong>
+            <p>Go to <a href="https://github.com" target="_blank">github.com</a> and sign up for a free account if you don't have one.</p>
+          </div>
+        </div>
+        <div class="deploy-step">
+          <div class="deploy-num">2</div>
+          <div class="deploy-body">
+            <strong>Create a New Repository</strong>
+            <p>Click the green <strong>New</strong> button. Name it exactly: <code>warframe-fashion-guide</code>. Set it to <strong>Public</strong>. Click <strong>Create repository</strong>.</p>
+          </div>
+        </div>
+        <div class="deploy-step">
+          <div class="deploy-num">3</div>
+          <div class="deploy-body">
+            <strong>Upload Your Files</strong>
+            <p>In the new repository, click <strong>uploading an existing file</strong>. Drag and drop all 7 files: <code>index.html</code>, <code>gallery.html</code>, <code>generator.html</code>, <code>process.html</code>, <code>style.css</code>, <code>script.js</code>, <code>generator.js</code>. Click <strong>Commit changes</strong>.</p>
+          </div>
+        </div>
+        <div class="deploy-step">
+          <div class="deploy-num">4</div>
+          <div class="deploy-body">
+            <strong>Enable GitHub Pages</strong>
+            <p>Go to your repository's <strong>Settings</strong> tab → scroll to <strong>Pages</strong> in the left sidebar → under <strong>Source</strong>, select <strong>Deploy from a branch</strong> → choose <strong>main</strong> branch → click <strong>Save</strong>.</p>
+          </div>
+        </div>
+        <div class="deploy-step">
+          <div class="deploy-num">5</div>
+          <div class="deploy-body">
+            <strong>Wait 1–2 Minutes, Then Visit Your Site</strong>
+            <p>Your live URL will be: <code>https://YOUR-USERNAME.github.io/warframe-fashion-guide/</code><br/>Replace YOUR-USERNAME with your actual GitHub username.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- FUTURE PROMPTS -->
+    <div class="future-prompts">
+      <h2>🔮 Future Improvement Prompts</h2>
+      <p>Copy and paste these prompts into Claude to add more features later:</p>
+
+      <div class="future-prompt-card">
+        <div class="fp-label">ADD MORE BUILDS</div>
+        <div class="fp-text">"Add 6 more Warframe build cards to gallery.html. Include Garuda (infested/dark), Nidus Prime (infested), Trinity Prime (angelic), Nezha Prime (neon), Revenant (dark), and Octavia Prime (royal/gold). Each should have a color palette with hex codes, armor recommendations, syandana, and style notes."</div>
+      </div>
+
+      <div class="future-prompt-card">
+        <div class="fp-label">ADD SEARCH</div>
+        <div class="fp-text">"Add a search bar to gallery.html that filters build cards in real time as the user types a Warframe name. Use JavaScript to show/hide cards based on the text input."</div>
+      </div>
+
+      <div class="future-prompt-card">
+        <div class="fp-label">ADD FAVORITES</div>
+        <div class="fp-text">"Add a favorites system to the gallery. Each card should have a heart button. Clicking it saves the build to localStorage. Add a 'Saved Favorites' section at the top of the gallery that shows only favorited builds."</div>
+      </div>
+
+      <div class="future-prompt-card">
+        <div class="fp-label">ADD COLOR COPY</div>
+        <div class="fp-text">"In gallery.html modal popups and the generator result, make each color swatch clickable so it copies the hex code to the clipboard. Show a small 'Copied!' tooltip when clicked."</div>
+      </div>
+
+      <div class="future-prompt-card">
+        <div class="fp-label">ADD ANIMATIONS</div>
+        <div class="fp-text">"Add scroll-triggered entrance animations to all cards on gallery.html and index.html using the Intersection Observer API. Cards should fade in and slide up when they enter the viewport."</div>
+      </div>
+    </div>
+
+  </section>
+
+  <footer class="footer">
+    <p>⬡ FASHIONFRAME GUIDE &nbsp;|&nbsp; Built for CSIT 212 &nbsp;|&nbsp; A fan site for Warframe Tenno</p>
+    <p style="margin-top:6px; font-size:0.75rem; opacity:0.4;">Warframe is property of Digital Extremes. This is an unofficial fan project.</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,431 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Gallery – Warframe Fashion Guide</title>
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Rajdhani:wght@300;400;600&display=swap" rel="stylesheet"/>
+</head>
+<body>
+
+  <nav class="navbar">
+    <div class="nav-logo">⬡ FASHIONFRAME</div>
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="gallery.html" class="active">Gallery</a></li>
+      <li><a href="generator.html">Generate</a></li>
+      <li><a href="process.html">How I Made This</a></li>
+    </ul>
+    <div class="nav-toggle" onclick="toggleMenu()">☰</div>
+  </nav>
+
+  <section class="page-hero">
+    <h1 class="page-title">FASHION GALLERY</h1>
+    <p class="page-sub">Curated builds from across the Origin System</p>
+  </section>
+
+  <section class="gallery-section">
+    <div class="gallery-filters">
+      <button class="filter-btn active" onclick="filterGallery('all', this)">All</button>
+      <button class="filter-btn" onclick="filterGallery('dark', this)">Dark</button>
+      <button class="filter-btn" onclick="filterGallery('gold', this)">Gold</button>
+      <button class="filter-btn" onclick="filterGallery('neon', this)">Neon</button>
+      <button class="filter-btn" onclick="filterGallery('royal', this)">Royal</button>
+      <button class="filter-btn" onclick="filterGallery('angelic', this)">Angelic</button>
+      <button class="filter-btn" onclick="filterGallery('infested', this)">Infested</button>
+    </div>
+
+    <div class="gallery-grid" id="gallery-grid">
+
+      <!-- Build 1 -->
+      <div class="build-card" data-theme="dark" onclick="openModal('modal-1')">
+        <div class="build-preview" style="background: linear-gradient(135deg, #0a0a0a, #1a0a2e, #0d0d1a);">
+          <div class="build-warframe-art">
+            <div class="wf-silhouette excalibur-dark"></div>
+          </div>
+          <div class="build-badge dark">DARK</div>
+        </div>
+        <div class="build-info">
+          <h3>Excalibur Umbra — Void Wraith</h3>
+          <p>Deep obsidian with ember-red accents. A classic dark build.</p>
+          <div class="swatch-row">
+            <span class="swatch" style="background:#0d0d0d"></span>
+            <span class="swatch" style="background:#1a0000"></span>
+            <span class="swatch" style="background:#8b0000"></span>
+            <span class="swatch" style="background:#2a0a0a"></span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Build 2 -->
+      <div class="build-card" data-theme="gold" onclick="openModal('modal-2')">
+        <div class="build-preview" style="background: linear-gradient(135deg, #1a1200, #2e2000, #3d2b00);">
+          <div class="build-warframe-art">
+            <div class="wf-silhouette rhino-gold"></div>
+          </div>
+          <div class="build-badge gold">GOLD</div>
+        </div>
+        <div class="build-info">
+          <h3>Rhino Prime — Gilded Emperor</h3>
+          <p>Full gold regalia on the prime silhouette. Power incarnate.</p>
+          <div class="swatch-row">
+            <span class="swatch" style="background:#c8a400"></span>
+            <span class="swatch" style="background:#ffd700"></span>
+            <span class="swatch" style="background:#8b6914"></span>
+            <span class="swatch" style="background:#1a1200"></span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Build 3 -->
+      <div class="build-card" data-theme="neon" onclick="openModal('modal-3')">
+        <div class="build-preview" style="background: linear-gradient(135deg, #000a1a, #001a2e, #00051a);">
+          <div class="build-warframe-art">
+            <div class="wf-silhouette volt-neon"></div>
+          </div>
+          <div class="build-badge neon">NEON</div>
+        </div>
+        <div class="build-info">
+          <h3>Volt Prime — Cyberstorm</h3>
+          <p>Electric cyan on midnight black. Pure energy aesthetic.</p>
+          <div class="swatch-row">
+            <span class="swatch" style="background:#00f5ff"></span>
+            <span class="swatch" style="background:#001a2e"></span>
+            <span class="swatch" style="background:#7b00ff"></span>
+            <span class="swatch" style="background:#00ff88"></span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Build 4 -->
+      <div class="build-card" data-theme="royal" onclick="openModal('modal-4')">
+        <div class="build-preview" style="background: linear-gradient(135deg, #0a001a, #150030, #1a0040);">
+          <div class="build-warframe-art">
+            <div class="wf-silhouette mag-royal"></div>
+          </div>
+          <div class="build-badge royal">ROYAL</div>
+        </div>
+        <div class="build-info">
+          <h3>Mag Prime — Arcane Sovereign</h3>
+          <p>Deep violet and silver — regal, commanding, magnetic.</p>
+          <div class="swatch-row">
+            <span class="swatch" style="background:#6a0dad"></span>
+            <span class="swatch" style="background:#c0c0c0"></span>
+            <span class="swatch" style="background:#1a0040"></span>
+            <span class="swatch" style="background:#e0c8ff"></span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Build 5 -->
+      <div class="build-card" data-theme="angelic" onclick="openModal('modal-5')">
+        <div class="build-preview" style="background: linear-gradient(135deg, #f5f0e8, #e8e0d0, #fffaf0);">
+          <div class="build-warframe-art">
+            <div class="wf-silhouette wisp-angelic"></div>
+          </div>
+          <div class="build-badge angelic">ANGELIC</div>
+        </div>
+        <div class="build-info">
+          <h3>Wisp — Celestial Apparition</h3>
+          <p>Ivory white, soft gold, and luminous pearl. Ethereal beauty.</p>
+          <div class="swatch-row">
+            <span class="swatch" style="background:#fffff0"></span>
+            <span class="swatch" style="background:#ffd700"></span>
+            <span class="swatch" style="background:#fff8e7"></span>
+            <span class="swatch" style="background:#e8d5a3"></span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Build 6 -->
+      <div class="build-card" data-theme="infested" onclick="openModal('modal-6')">
+        <div class="build-preview" style="background: linear-gradient(135deg, #0a1400, #001a05, #0d1a00);">
+          <div class="build-warframe-art">
+            <div class="wf-silhouette saryn-infested"></div>
+          </div>
+          <div class="build-badge infested">INFESTED</div>
+        </div>
+        <div class="build-info">
+          <h3>Saryn Prime — Virulent Growth</h3>
+          <p>Toxic greens and necrotic purples. Beautifully horrifying.</p>
+          <div class="swatch-row">
+            <span class="swatch" style="background:#2d7a00"></span>
+            <span class="swatch" style="background:#8b00ff"></span>
+            <span class="swatch" style="background:#0a1400"></span>
+            <span class="swatch" style="background:#a3ff00"></span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Build 7 -->
+      <div class="build-card" data-theme="dark" onclick="openModal('modal-7')">
+        <div class="build-preview" style="background: linear-gradient(135deg, #050508, #0a0a14, #080810);">
+          <div class="build-warframe-art">
+            <div class="wf-silhouette ash-dark"></div>
+          </div>
+          <div class="build-badge dark">DARK</div>
+        </div>
+        <div class="build-info">
+          <h3>Ash Prime — Shadow Operative</h3>
+          <p>Charcoal and gunmetal with cold blue razor highlights.</p>
+          <div class="swatch-row">
+            <span class="swatch" style="background:#1c1c1c"></span>
+            <span class="swatch" style="background:#404040"></span>
+            <span class="swatch" style="background:#2d4a6e"></span>
+            <span class="swatch" style="background:#4a90c4"></span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Build 8 -->
+      <div class="build-card" data-theme="neon" onclick="openModal('modal-8')">
+        <div class="build-preview" style="background: linear-gradient(135deg, #0f000f, #1a001a, #0a000a);">
+          <div class="build-warframe-art">
+            <div class="wf-silhouette nova-neon"></div>
+          </div>
+          <div class="build-badge neon">NEON</div>
+        </div>
+        <div class="build-info">
+          <h3>Nova Prime — Antimatter Rave</h3>
+          <p>Hot pink and electric violet on a void-black canvas.</p>
+          <div class="swatch-row">
+            <span class="swatch" style="background:#ff00cc"></span>
+            <span class="swatch" style="background:#cc00ff"></span>
+            <span class="swatch" style="background:#0f000f"></span>
+            <span class="swatch" style="background:#ff80ff"></span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Build 9 -->
+      <div class="build-card" data-theme="royal" onclick="openModal('modal-9')">
+        <div class="build-preview" style="background: linear-gradient(135deg, #0a0500, #1a1000, #0f0800);">
+          <div class="build-warframe-art">
+            <div class="wf-silhouette mesa-royal"></div>
+          </div>
+          <div class="build-badge royal">ROYAL</div>
+        </div>
+        <div class="build-info">
+          <h3>Mesa Prime — Desert Empress</h3>
+          <p>Burnished copper, ivory, and midnight blue. A desert queen.</p>
+          <div class="swatch-row">
+            <span class="swatch" style="background:#b87333"></span>
+            <span class="swatch" style="background:#fffff0"></span>
+            <span class="swatch" style="background:#003366"></span>
+            <span class="swatch" style="background:#8b4513"></span>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- MODALS -->
+  <div class="modal-overlay" id="modal-overlay" onclick="closeModal()"></div>
+
+  <div class="build-modal" id="modal-1">
+    <button class="modal-close" onclick="closeModal()">✕</button>
+    <h2>Excalibur Umbra — Void Wraith</h2>
+    <div class="modal-theme-badge dark">DARK THEME</div>
+    <div class="modal-palette">
+      <div class="palette-item"><span class="swatch lg" style="background:#0d0d0d"></span><span>Primary: #0d0d0d (Abyss Black)</span></div>
+      <div class="palette-item"><span class="swatch lg" style="background:#1a0000"></span><span>Secondary: #1a0000 (Blood Dark)</span></div>
+      <div class="palette-item"><span class="swatch lg" style="background:#8b0000"></span><span>Accent: #8b0000 (Deep Crimson)</span></div>
+      <div class="palette-item"><span class="swatch lg" style="background:#2a0a0a"></span><span>Tertiary: #2a0a0a (Ember Shade)</span></div>
+    </div>
+    <div class="modal-details">
+      <h4>⚔️ Armor Recommendations</h4>
+      <ul>
+        <li>Umbra Armor Set (default — matches silhouette perfectly)</li>
+        <li>Pakal Armor — angular and aggressive</li>
+        <li>Targis Prime Armor — for a regal dark warrior</li>
+      </ul>
+      <h4>🌊 Syandana</h4>
+      <ul>
+        <li>Asa Syandana — sleek, minimal</li>
+        <li>Garuda Talons Syandana — threatening drape</li>
+      </ul>
+      <h4>✨ Ephemera</h4>
+      <ul><li>Bleeding Body Ephemera or Smoking Body Ephemera (dark smoke)</li></ul>
+      <h4>💡 Style Notes</h4>
+      <p>Keep energy color deep crimson. Use the Stalker palette for true void-blacks. Avoid any white channels — maintain full darkness for this look.</p>
+    </div>
+  </div>
+
+  <div class="build-modal" id="modal-2">
+    <button class="modal-close" onclick="closeModal()">✕</button>
+    <h2>Rhino Prime — Gilded Emperor</h2>
+    <div class="modal-theme-badge gold">GOLD THEME</div>
+    <div class="modal-palette">
+      <div class="palette-item"><span class="swatch lg" style="background:#c8a400"></span><span>Primary: #c8a400 (Ancient Gold)</span></div>
+      <div class="palette-item"><span class="swatch lg" style="background:#ffd700"></span><span>Secondary: #ffd700 (Bright Gold)</span></div>
+      <div class="palette-item"><span class="swatch lg" style="background:#8b6914"></span><span>Accent: #8b6914 (Bronze Shadow)</span></div>
+      <div class="palette-item"><span class="swatch lg" style="background:#1a1200"></span><span>Base: #1a1200 (Dark Onyx)</span></div>
+    </div>
+    <div class="modal-details">
+      <h4>⚔️ Armor Recommendations</h4>
+      <ul>
+        <li>Palatine Armor — bulky, imperial presence</li>
+        <li>Rubedo-Lined Chest Plate — glowing gold trim</li>
+        <li>Agathon Armor — structured and regal</li>
+      </ul>
+      <h4>🌊 Syandana</h4>
+      <ul><li>Regalia Syandana — sweeping noble drape</li><li>Odanata Prime Syandana — ornate and grand</li></ul>
+      <h4>💡 Style Notes</h4>
+      <p>Use Primed Chamber palette or Eidolon palette for the richest golds. Set energy color to warm gold-white. Use Rhino's Prime details as natural gold trim.</p>
+    </div>
+  </div>
+
+  <div class="build-modal" id="modal-3">
+    <button class="modal-close" onclick="closeModal()">✕</button>
+    <h2>Volt Prime — Cyberstorm</h2>
+    <div class="modal-theme-badge neon">NEON THEME</div>
+    <div class="modal-palette">
+      <div class="palette-item"><span class="swatch lg" style="background:#00f5ff"></span><span>Primary: #00f5ff (Electric Cyan)</span></div>
+      <div class="palette-item"><span class="swatch lg" style="background:#001a2e"></span><span>Secondary: #001a2e (Deep Navy)</span></div>
+      <div class="palette-item"><span class="swatch lg" style="background:#7b00ff"></span><span>Accent: #7b00ff (Neon Violet)</span></div>
+      <div class="palette-item"><span class="swatch lg" style="background:#00ff88"></span><span>Pop: #00ff88 (Matrix Green)</span></div>
+    </div>
+    <div class="modal-details">
+      <h4>⚔️ Armor Recommendations</h4>
+      <ul>
+        <li>Kavasa Prime Kubrow Collar (for structure)</li>
+        <li>Edo Prime Armor — angular sharp edges</li>
+        <li>Lith Armor — minimal, lets the neon pop</li>
+      </ul>
+      <h4>🌊 Syandana</h4>
+      <ul><li>Igaro Syandana — glows beautifully with energy color</li></ul>
+      <h4>💡 Style Notes</h4>
+      <p>Volt's default prime shaders are perfect for neon. Use Shock Trooper Volt skin + set energy to bright cyan. Add Jolt Ephemera for sparkling electricity.</p>
+    </div>
+  </div>
+
+  <div class="build-modal" id="modal-4">
+    <button class="modal-close" onclick="closeModal()">✕</button>
+    <h2>Mag Prime — Arcane Sovereign</h2>
+    <div class="modal-theme-badge royal">ROYAL THEME</div>
+    <div class="modal-palette">
+      <div class="palette-item"><span class="swatch lg" style="background:#6a0dad"></span><span>Primary: #6a0dad (Imperial Purple)</span></div>
+      <div class="palette-item"><span class="swatch lg" style="background:#c0c0c0"></span><span>Secondary: #c0c0c0 (Silver)</span></div>
+      <div class="palette-item"><span class="swatch lg" style="background:#1a0040"></span><span>Base: #1a0040 (Void Purple)</span></div>
+      <div class="palette-item"><span class="swatch lg" style="background:#e0c8ff"></span><span>Glow: #e0c8ff (Pale Lavender)</span></div>
+    </div>
+    <div class="modal-details">
+      <h4>⚔️ Armor Recommendations</h4>
+      <ul>
+        <li>Mag Pneuma Skin — the best base for a regal look</li>
+        <li>Abalone Armor — crystalline, elegant</li>
+        <li>Graxx Armor for edgier royal aesthetic</li>
+      </ul>
+      <h4>🌊 Syandana</h4>
+      <ul><li>Ova Syandana — dramatic long flowing cloak</li></ul>
+      <h4>💡 Style Notes</h4>
+      <p>Mag's slim silhouette is ideal for royal looks. The Silver Grove palette has the best silver tones. Set energy to soft lavender white for a magical aura.</p>
+    </div>
+  </div>
+
+  <div class="build-modal" id="modal-5">
+    <button class="modal-close" onclick="closeModal()">✕</button>
+    <h2>Wisp — Celestial Apparition</h2>
+    <div class="modal-theme-badge angelic">ANGELIC THEME</div>
+    <div class="modal-palette">
+      <div class="palette-item"><span class="swatch lg" style="background:#fffff0"></span><span>Primary: #fffff0 (Celestial Ivory)</span></div>
+      <div class="palette-item"><span class="swatch lg" style="background:#ffd700"></span><span>Accent: #ffd700 (Halo Gold)</span></div>
+      <div class="palette-item"><span class="swatch lg" style="background:#fff8e7"></span><span>Secondary: #fff8e7 (Warm White)</span></div>
+      <div class="palette-item"><span class="swatch lg" style="background:#e8d5a3"></span><span>Shadow: #e8d5a3 (Parchment)</span></div>
+    </div>
+    <div class="modal-details">
+      <h4>⚔️ Armor Recommendations</h4>
+      <ul>
+        <li>Wisp Empyrean Skin — glowing, divine</li>
+        <li>Harrow Reliquary Armor — sacred look</li>
+        <li>Nyx Valesti Armor for feathered wings</li>
+      </ul>
+      <h4>🌊 Syandana</h4>
+      <ul><li>Seraphim Syandana — literal wings</li><li>Asa Prime Syandana — light, flowing</li></ul>
+      <h4>💡 Style Notes</h4>
+      <p>Wisp is already ethereal. Stack the Wisp Halo Ephemera and set all colors to whites/creams. Energy as soft warm gold makes her look holy.</p>
+    </div>
+  </div>
+
+  <div class="build-modal" id="modal-6">
+    <button class="modal-close" onclick="closeModal()">✕</button>
+    <h2>Saryn Prime — Virulent Growth</h2>
+    <div class="modal-theme-badge infested">INFESTED THEME</div>
+    <div class="modal-palette">
+      <div class="palette-item"><span class="swatch lg" style="background:#2d7a00"></span><span>Primary: #2d7a00 (Toxic Green)</span></div>
+      <div class="palette-item"><span class="swatch lg" style="background:#8b00ff"></span><span>Accent: #8b00ff (Rot Purple)</span></div>
+      <div class="palette-item"><span class="swatch lg" style="background:#0a1400"></span><span>Base: #0a1400 (Deep Rot)</span></div>
+      <div class="palette-item"><span class="swatch lg" style="background:#a3ff00"></span><span>Highlight: #a3ff00 (Acid Pop)</span></div>
+    </div>
+    <div class="modal-details">
+      <h4>⚔️ Armor Recommendations</h4>
+      <ul>
+        <li>Saryn Orphid Skin — organic, fleshy</li>
+        <li>Biomech Armor — exposed bone/muscle design</li>
+        <li>Hemlock Armor — thorned and infested</li>
+      </ul>
+      <h4>🌊 Syandana</h4>
+      <ul><li>Vel Noctis Syandana — tentacle-like</li><li>Biomech Syandana — perfect thematic match</li></ul>
+      <h4>💡 Style Notes</h4>
+      <p>The Infested palette has the best biological hues. Set energy to acid green. Mix dark base with bright toxic highlights — contrast is the key to infested looks.</p>
+    </div>
+  </div>
+
+  <!-- Minimal modals 7-9 -->
+  <div class="build-modal" id="modal-7">
+    <button class="modal-close" onclick="closeModal()">✕</button>
+    <h2>Ash Prime — Shadow Operative</h2>
+    <div class="modal-theme-badge dark">DARK THEME</div>
+    <div class="modal-palette">
+      <div class="palette-item"><span class="swatch lg" style="background:#1c1c1c"></span><span>Primary: #1c1c1c (Charcoal)</span></div>
+      <div class="palette-item"><span class="swatch lg" style="background:#404040"></span><span>Secondary: #404040 (Gunmetal)</span></div>
+      <div class="palette-item"><span class="swatch lg" style="background:#2d4a6e"></span><span>Accent: #2d4a6e (Steel Blue)</span></div>
+      <div class="palette-item"><span class="swatch lg" style="background:#4a90c4"></span><span>Pop: #4a90c4 (Ice Blue)</span></div>
+    </div>
+    <div class="modal-details">
+      <h4>Style Notes</h4>
+      <p>Ash's slim ninja silhouette suits a covert ops theme perfectly. Use Ash Koga Skin for the most operator-style look. Cold blue energy keeps it sleek and deadly.</p>
+    </div>
+  </div>
+
+  <div class="build-modal" id="modal-8">
+    <button class="modal-close" onclick="closeModal()">✕</button>
+    <h2>Nova Prime — Antimatter Rave</h2>
+    <div class="modal-theme-badge neon">NEON THEME</div>
+    <div class="modal-palette">
+      <div class="palette-item"><span class="swatch lg" style="background:#ff00cc"></span><span>Primary: #ff00cc (Hot Pink)</span></div>
+      <div class="palette-item"><span class="swatch lg" style="background:#cc00ff"></span><span>Secondary: #cc00ff (Electric Violet)</span></div>
+      <div class="palette-item"><span class="swatch lg" style="background:#0f000f"></span><span>Base: #0f000f (Void Black)</span></div>
+      <div class="palette-item"><span class="swatch lg" style="background:#ff80ff"></span><span>Glow: #ff80ff (Soft Magenta)</span></div>
+    </div>
+    <div class="modal-details">
+      <h4>Style Notes</h4>
+      <p>Nova's antimatter portals naturally lend themselves to neon. Use Nova Atomica Skin. The Shock Wave Ephemera adds perfect neon rings on every ability cast.</p>
+    </div>
+  </div>
+
+  <div class="build-modal" id="modal-9">
+    <button class="modal-close" onclick="closeModal()">✕</button>
+    <h2>Mesa Prime — Desert Empress</h2>
+    <div class="modal-theme-badge royal">ROYAL THEME</div>
+    <div class="modal-palette">
+      <div class="palette-item"><span class="swatch lg" style="background:#b87333"></span><span>Primary: #b87333 (Copper)</span></div>
+      <div class="palette-item"><span class="swatch lg" style="background:#fffff0"></span><span>Secondary: #fffff0 (Bone White)</span></div>
+      <div class="palette-item"><span class="swatch lg" style="background:#003366"></span><span>Accent: #003366 (Midnight Blue)</span></div>
+      <div class="palette-item"><span class="swatch lg" style="background:#8b4513"></span><span>Base: #8b4513 (Saddle Brown)</span></div>
+    </div>
+    <div class="modal-details">
+      <h4>Style Notes</h4>
+      <p>Mesa's gunslinger silhouette suits a desert-western royal look. Use Strega Mesa skin for the most empress energy. Pair with Bullet Dance Ephemera for dramatic flair.</p>
+    </div>
+  </div>
+
+  <footer class="footer">
+    <p>⬡ FASHIONFRAME GUIDE &nbsp;|&nbsp; Built for CSIT 212 &nbsp;|&nbsp; A fan site for Warframe Tenno</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

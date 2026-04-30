@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Warframe Fashion Guide</title>
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Rajdhani:wght@300;400;600&display=swap" rel="stylesheet"/>
+</head>
+<body>
+
+  <!-- NAV -->
+  <nav class="navbar">
+    <div class="nav-logo">⬡ FASHIONFRAME</div>
+    <ul class="nav-links">
+      <li><a href="index.html" class="active">Home</a></li>
+      <li><a href="gallery.html">Gallery</a></li>
+      <li><a href="generator.html">Generate</a></li>
+      <li><a href="process.html">How I Made This</a></li>
+    </ul>
+    <div class="nav-toggle" onclick="toggleMenu()">☰</div>
+  </nav>
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="hero-bg-grid"></div>
+    <div class="hero-content">
+      <p class="hero-eyebrow">THE ULTIMATE GUIDE TO</p>
+      <h1 class="hero-title">FASHIONFRAME</h1>
+      <p class="hero-subtitle">Where style meets the Origin System. Discover iconic Warframe looks, curated color palettes, and armor combinations that make you the most stylish Tenno in the Relay.</p>
+      <div class="hero-cta">
+        <a href="generator.html" class="btn-primary">Generate My Look</a>
+        <a href="gallery.html" class="btn-secondary">Browse Gallery</a>
+      </div>
+    </div>
+    <div class="hero-orb"></div>
+  </section>
+
+  <!-- FEATURES -->
+  <section class="features">
+    <h2 class="section-title">WHAT'S INSIDE</h2>
+    <div class="feature-grid">
+      <div class="feature-card" data-delay="0">
+        <div class="feature-icon">🎨</div>
+        <h3>Curated Color Palettes</h3>
+        <p>Hand-picked color combinations for every aesthetic — from void-blessed gold to infested organic greens.</p>
+      </div>
+      <div class="feature-card" data-delay="1">
+        <div class="feature-icon">⚙️</div>
+        <h3>Armor & Accessory Tips</h3>
+        <p>Learn which armor sets, syandanas, and ephemera complement each Warframe's silhouette.</p>
+      </div>
+      <div class="feature-card" data-delay="2">
+        <div class="feature-icon">✨</div>
+        <h3>Theme Generator</h3>
+        <p>Pick a vibe — Dark, Gold, Neon, Royal, Angelic, or Infested — and get an instant fashion blueprint.</p>
+      </div>
+      <div class="feature-card" data-delay="3">
+        <div class="feature-icon">🏆</div>
+        <h3>Build Gallery</h3>
+        <p>Browse a curated gallery of standout Fashionframe builds with full breakdowns and style notes.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- QUICK THEMES PREVIEW -->
+  <section class="themes-preview">
+    <h2 class="section-title">POPULAR THEMES</h2>
+    <div class="themes-strip">
+      <a href="generator.html?theme=dark" class="theme-pill dark">🌑 Dark</a>
+      <a href="generator.html?theme=gold" class="theme-pill gold">✦ Gold</a>
+      <a href="generator.html?theme=neon" class="theme-pill neon">⚡ Neon</a>
+      <a href="generator.html?theme=royal" class="theme-pill royal">♛ Royal</a>
+      <a href="generator.html?theme=angelic" class="theme-pill angelic">☽ Angelic</a>
+      <a href="generator.html?theme=infested" class="theme-pill infested">☣ Infested</a>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <p>⬡ FASHIONFRAME GUIDE &nbsp;|&nbsp; Built for CSIT 212 &nbsp;|&nbsp; A fan site for Warframe Tenno</p>
+    <p style="margin-top:6px; font-size:0.75rem; opacity:0.4;">Warframe is property of Digital Extremes. This is an unofficial fan project.</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
